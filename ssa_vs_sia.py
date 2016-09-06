@@ -1,3 +1,9 @@
+# TODO: This only allows the agent to make bets at 1:1 odds. That
+# might not be the best way to set this up.
+#
+# TODO: Did I accidentally encode SIA right into this simulation? If
+# so, how would we model SSA?
+
 import random
 
 H="HEADS"
@@ -12,10 +18,13 @@ WORLDS = {
 
 FIRST_TEN = set(range(1, 10+1))
 
+# Function that implements some proposed betting strategy (i.e. the
+# agent).
 def play(room_number):
     return guess, bet
 
 
+# Run one round of the game and return the betting outcome.
 def one_game():
     GODS_TOSS = random.choice([H, T])
 
